@@ -99,7 +99,7 @@ SIMPLE_JWT = {
 
 # CORS settings
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
+    "http://localhost:3000","https://pagapouco.onrender.com/"
     # Adicione suas origens de produção aqui se necessário
 ]
 
