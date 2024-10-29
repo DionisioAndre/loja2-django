@@ -6,15 +6,15 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-j%0x0n)jn@vfib31tmawt17bgn$=3x=_3y)=)yyt$v$!2r*#rm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+
+# Add localhost and your render host to ALLOWED_HOSTS
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'pagapouco.onrender.com',]
 
 # Application definition
 INSTALLED_APPS = [
@@ -69,7 +69,6 @@ DATABASES = {
     }
 }
 
-
 # Internationalization
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
@@ -97,10 +96,12 @@ SIMPLE_JWT = {
     'ROTATE_REFRESH_TOKENS': True,
     'BLACKLIST_AFTER_ROTATION': True,
 }
-ALLOWED_HOSTS = ['.onrender.com']
 
+# CORS settings
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     # Adicione suas origens de produção aqui se necessário
 ]
+
+# Custom User Model
 AUTH_USER_MODEL = 'lojaApp.User1'
