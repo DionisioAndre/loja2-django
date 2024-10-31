@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-j%0x0n)jn@vfib31tmawt17bgn$=3x=_3y)=)yyt$v$!2r*#rm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # Add localhost and your render host to ALLOWED_HOSTS
 ALLOWED_HOSTS = [
@@ -71,8 +71,12 @@ WSGI_APPLICATION = 'loja.wsgi.application'
 # Database
 DATABASES = {
      'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'pagapoucobd',
+        'USER': 'dionisio',
+        'PASSWORD': 'PNRfiKzJDNoJO6Su6CYPNdIUPyjm3JRS',
+        'HOST': 'postgresql://dionisio:PNRfiKzJDNoJO6Su6CYPNdIUPyjm3JRS@dpg-cshhnnaj1k6c73980amg-a.singapore-postgres.render.com/pagapoucobd',
+        'PORT': '5432',
     }
 }
 
