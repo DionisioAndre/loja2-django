@@ -12,9 +12,14 @@ SECRET_KEY = 'django-insecure-j%0x0n)jn@vfib31tmawt17bgn$=3x=_3y)=)yyt$v$!2r*#rm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-
 # Add localhost and your render host to ALLOWED_HOSTS
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'https://pagapouco.onrender.com/','https://pagapouco1.vercel.app/','https://loja2-django.onrender.com/']
+ALLOWED_HOSTS = [
+    '127.0.0.1', 
+    'localhost', 
+    'pagapouco.onrender.com', 
+    'pagapouco1.vercel.app', 
+    'loja2-django.onrender.com'
+]
 
 # Application definition
 INSTALLED_APPS = [
@@ -80,7 +85,7 @@ STATIC_URL = 'static/'
 
 # Media files (uploads)
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = BASE_DIR / 'media'  # Usando Path para consistência
 
 # REST Framework settings
 REST_FRAMEWORK = {
@@ -99,8 +104,10 @@ SIMPLE_JWT = {
 
 # CORS settings
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000","https://pagapouco.onrender.com/","https://pagapouco1.vercel.app/","https://loja2-django.onrender.com/"
-    # Adicione suas origens de produção aqui se necessário
+    "http://localhost:3000", 
+    "https://pagapouco.onrender.com", 
+    "https://pagapouco1.vercel.app", 
+    "https://loja2-django.onrender.com"
 ]
 
 # Custom User Model
