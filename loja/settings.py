@@ -63,9 +63,13 @@ WSGI_APPLICATION = 'loja.wsgi.application'
 
 # Database
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+     'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('DB_NAME'),  # Nome do banco de dados
+        'USER': os.environ.get('DB_USER'),  # Usuário
+        'PASSWORD': os.environ.get('DB_PASSWORD'),  # Senha
+        'HOST': os.environ.get('DB_HOST'),  # Host
+        'PORT': os.environ.get('DB_PORT', '5432'),  # Porta, padrão é 5432
     }
 }
 
