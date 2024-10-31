@@ -14,7 +14,7 @@ DEBUG = False
 
 
 # Add localhost and your render host to ALLOWED_HOSTS
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'pagapouco.onrender.com','pagapouco1.vercel.app']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'pagapouco.onrender.com','https://pagapouco1.vercel.app/']
 
 # Application definition
 INSTALLED_APPS = [
@@ -99,7 +99,7 @@ SIMPLE_JWT = {
 
 # CORS settings
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000","https://pagapouco.onrender.com/","pagapouco1.vercel.app"
+    "http://localhost:3000","https://pagapouco.onrender.com/","https://pagapouco1.vercel.app/"
     # Adicione suas origens de produção aqui se necessário
 ]
 
