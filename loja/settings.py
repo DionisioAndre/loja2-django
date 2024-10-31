@@ -75,7 +75,7 @@ DATABASES = {
         'NAME': 'pagapoucobd',
         'USER': 'dionisio',
         'PASSWORD': 'PNRfiKzJDNoJO6Su6CYPNdIUPyjm3JRS',
-        'HOST': 'postgresql://dionisio:PNRfiKzJDNoJO6Su6CYPNdIUPyjm3JRS@dpg-cshhnnaj1k6c73980amg-a.singapore-postgres.render.com/pagapoucobd',
+        'HOST': 'dpg-cshhnnaj1k6c73980amg-a.singapore-postgres.render.com',
         'PORT': '5432',
     }
 }
