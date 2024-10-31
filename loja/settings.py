@@ -33,10 +33,12 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'lojaApp',  # Certifique-se de que o nome da sua app esteja correto
+    'whitenoise',  # Adicione o Whitenoise aqui
 ]
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Adicione isso no início da lista
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -81,7 +83,13 @@ USE_I18N = True
 USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'  # Corrigido para incluir a barra inicial
+
+# Diretório onde os arquivos estáticos serão coletados
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # ou qualquer caminho que você preferir
+
+# Para garantir que os arquivos estáticos sejam servidos corretamente em produção
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # Se você estiver usando Whitenoise
 
 # Media files (uploads)
 MEDIA_URL = '/media/'
